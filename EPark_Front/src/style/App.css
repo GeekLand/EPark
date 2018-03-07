@@ -1,0 +1,226 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*主页样式*/
+#root {
+  height: 100%;
+  background-color: transparent;
+}
+#root .ant-layout-has-sider{
+  height: 100%;
+}
+.ant-layout-content {
+    border-radius: 10px;
+    background: #fff;
+}
+
+/*sider侧边栏样式*/
+.logo {
+  height: 32px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px;
+}
+.ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+.ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+.ant-layout-sider-collapsed .ant-menu-submenu-vertical > .ant-menu-submenu-title:after {
+  display: none;
+}
+
+/*content中表格的样式*/
+.ant-layout .ant-layout-content .ant-btn-primary {
+  margin: 0 5px 10px 5px;
+  float: right;
+}
+.ant-layout .ant-layout-content {
+    margin: 10px 16px!important;
+    padding: 20px 24px 0 24px!important;
+}
+
+/*content中对话框的样式*/
+.ant-modal-wrap .ant-confirm-body .anticon-info-circle {
+  display: none;
+}
+.ant-modal-wrap .ant-confirm-content {
+  margin: 0 0;
+  font-size: 13px;
+}
+.ant-modal-wrap .ant-confirm-content td {
+    width: 50%;
+}
+.ant-modal-wrap .ant-confirm-content div table{
+  width: 70%;
+  height: 100px;
+  text-align: center;
+  margin: 5px auto;
+  border-spacing: 10px 5px;
+}
+.ant-modal-wrap .ant-confirm-content table td:nth-child(1) {
+  text-align: right;
+}
+.ant-modal-wrap .ant-confirm-content table td:nth-child(2) {
+  text-align: left;
+}
+
+  /*OrderInfo中CustomInfo CarInfo ServiceInfo的样式*/
+.ant-layout .ant-layout-content .ant-layout-orderInfo {
+    position: relative;
+}
+.ant-layout .ant-layout-content .antd-layout-AddOrder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    background-color: #fff;
+    transition: opacity 90ms ease-in;
+}
+
+.ant-modal .ant-modal-content .ant-confirm-divNav {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.ant-modal .ant-modal-content .ant-confirm-divNav .ant-confirm-navList {
+    float: left;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+.ant-modal .ant-modal-content .ant-confirm-yearList {
+    float: left;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+.ant-modal .ant-modal-content .ant-confirm-factoryList {
+    float: left;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+.ant-confirm-navList a:hover {
+    color: #d60000;
+    text-decoration: underline;
+}
+.ant-confirm-yearList a:hover {
+    color: #d60000;
+    text-decoration: underline;
+}
+.ant-confirm-factoryList a:hover {
+    color: #d60000;
+    text-decoration: underline;
+}
+.navList {
+    color: #d60000;
+    text-decoration: underline;
+}
+.ant-modal .ant-modal-content .ant-confirm-divContent {
+    padding-top: 10px;
+}
+.ant-modal .ant-modal-content .ant-confirm-divContent .ant-confirm-contentList {
+    float: left;
+    margin: 5px;
+}
+/*.ant-modal .ant-modal-body .ant-confirm-btns button:first-child {
+    display: none;
+}*/
+
+/*AddOrder中的样式*/
+.ant-layout .ant-layout-content .layout-AddOrder-steps {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.ant-layout .ant-layout-content .layout-AddOrder-form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+/*ModifyINfo中的样式*/
+.ant-layout .ant-tabs .ant-tabs-content {
+  padding-top: 15px;
+  display: block;
+}
+.ant-layout .ant-layout-content .ant-form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+/*PackageInfo页面的样式*/
+.ant-popover .ant-popover-content .anticon-exclamation-circle {
+  display: none;
+}
+
+/*Modal通用组件header footer样式*/
+.ant-modal-footer {
+    border-top: 0;
+}
+.ant-modal-header {
+    border-bottom: 0;
+}
+
+/*BillInfo页面的样式*/
+.ant-layout-content .BillInfo span,label {
+    font-size: 13px;
+}
+
+/*OrderList页面Modal模态框的样式*/
+.modal-workOrder-Info .ant-form-item {
+    margin-bottom: 10px;
+}
+
+/*Login登录页面的样式*/
+.login-form {
+    max-width: 300px;
+}
+.login-form-button {
+    width: 100%;
+}
+.LoginCenter {
+    width: 300px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.LoginTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#canvasDiv canvas {
+    height: 945px;
+}
