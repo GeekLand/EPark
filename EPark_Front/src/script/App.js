@@ -143,7 +143,7 @@ class App extends React.Component {
         let pageDatas = Request.synPost("/storage/listAll",{});
         let storages = pageDatas.datas;
         for(let item of storages){
-            if(item.directorId == loginId && role !== "仓管" && role !== "客服主管"){
+            if(item.directorId === loginId && role !== "仓管" && role !== "客服主管"){
                 links.push(functionLinks[12]);
                 links.push(functionLinks[13]);
             }
