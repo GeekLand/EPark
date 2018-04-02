@@ -18,7 +18,7 @@ import com.gl.service.UserService;
  * 
  * @author weiguangming
  *
- */
+ */ 
 @RestController
 @RequestMapping("epark/user")
 public class UserController {
@@ -46,6 +46,7 @@ public class UserController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			LOGGER.error(e.getMessage());
+			result.setCode(ResultResponseDto.CODE_ERROR);
 		}
 		return result;
 	}
@@ -68,6 +69,7 @@ public class UserController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			LOGGER.error(e.getMessage());
+			result.setCode(ResultResponseDto.CODE_ERROR);
 		}
 		return result;
 	}
