@@ -208,6 +208,10 @@
 .login-form-button {
     width: 100%;
 }
+.login-form-forgot {
+  float: right;
+}
+
 .LoginCenter {
     width: 300px;
     margin: 0 auto;
@@ -218,6 +222,34 @@
     transform: translateX(-50%) translateY(-50%);
 }
 .LoginTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#canvasDiv canvas {
+    height: 945px;
+}
+
+/*Register注册页面的样式*/
+.register-form {
+    max-width: 300px;
+}
+.register-form-button {
+    width: 100%;
+}
+.register-form-forgot {
+  float: right;
+}
+
+.RegisterCenter {
+    width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.RegisterTitle {
     text-align: center;
     margin-bottom: 30px;
 }

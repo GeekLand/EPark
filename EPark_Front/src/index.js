@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from './script/App';
 import Login from './script/Login';
+import Register from './script/Register';
 import TemplateDemo from './script/TemplateDemo';
 
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path="/">
           <IndexRedirect to="/Login" />
           <Route path="Login" component={Login}/>
+          <Route path="Register" component={Register}/>
           <Route path="App" component={App}>
               <IndexRoute component={TemplateDemo} />
               {/*<Route path="OrderInfo" component={OrderInfo}/>*/}

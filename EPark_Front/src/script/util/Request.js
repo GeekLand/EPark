@@ -9,7 +9,7 @@ class Request {
     synPost(url, data) {
         let result;
         let userid = CookieUtil.getCookie('id');
-        if(userid == null || typeof('userid')=='undefined'){
+        if(userid === null || typeof('userid')==='undefined'){
             alert("系统超时，请重新登录。");
             return ;
         }

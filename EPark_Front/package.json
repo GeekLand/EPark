@@ -2,7 +2,7 @@
   "name": "antd-demo-geekland",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080",
+  "proxy": "http://localhost:8084",
   "dependencies": {
     "antd": "^2.8.1",
     "moment": "^2.18.1",

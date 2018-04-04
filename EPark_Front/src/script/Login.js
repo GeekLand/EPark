@@ -4,6 +4,7 @@ import Particle from 'zhihu-particle';
 import Request from './util/Request';
 import $ from 'jquery';
 import CookieUtil from './util/CookieUtil';
+import {Link} from 'react-router'
 const FormItem = Form.Item;
 
 class LoginForm extends React.Component {
@@ -20,7 +21,8 @@ class LoginForm extends React.Component {
     getCookie(name) {
         let arr;
         const reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-        if(arr=document.cookie.match(reg)){
+        arr=document.cookie.match(reg)
+        if(arr && arr.length > 0){
             return decodeURIComponent(arr[2]);
         } else {
             return null;
@@ -57,7 +59,7 @@ class LoginForm extends React.Component {
                     success: (response)=>{
                         if(response.code === '200' && response.data){
                             const rMap = response.data;
-                            if(rMap.result == "success"){
+                            if(rMap.result === "success"){
                                 let userData = rMap.data;
                                 if(userData){
                                     this.setCookie({
@@ -145,15 +147,17 @@ class LoginForm extends React.Component {
                     }
                 </FormItem>
                 <FormItem>
-                    {/*<Checkbox>记住登录</Checkbox>*/}
+                    {getFieldDecorator('remember', {
+                    valuePropName: 'checked',
+                    initialValue: true,
+                    })(
+                    <Checkbox>记住用户</Checkbox>
+                    )}
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         登录
                     </Button>
-                </FormItem>
-                <FormItem>
-                    <Button type="primary" className="login-form-button">
-                        注册
-                    </Button>
+                    <Link to="/Register">注册</Link>
+                    <a className="login-form-forgot">忘记密码</a>
                 </FormItem>
             </Form>
         );
